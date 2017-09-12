@@ -1,0 +1,15 @@
+<div ng-init="memberInit()">
+</div>
+<h1>Member</h1>
+<hr>
+<form name="memberForm" novalidate ng-submit="addMember()">
+    <div class="form-group" ng-class="{'has-error': memberForm.content.$invalid&& memberForm.content.$dirty}">
+        <input type="text" class="form-control focus" name="Team Name" placeholder="Team Name" autocomplete="off" required ng-model="newMember.firstName">
+    </div>
+    <button class="btn btn-default" ng-disabled="memberForm.$invalid">Add</button>
+</form>
+<hr>
+<div class="list-group">
+    <a class="list-group-item" ng-click="listClick(member)" ng-repeat="member in members">{{member.firstName}}&nbsp;
+    <i class="glyphicon glyphicon-remove pull-right" ng-click="removeMember(member)"></i></a>
+</div>

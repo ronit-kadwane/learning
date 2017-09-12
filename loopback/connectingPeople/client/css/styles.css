@@ -1,0 +1,15 @@
+body {
+  padding-top:50px
+}
+.glyphicon-remove:hover {
+  cursor:pointer
+}
+
+.listdemoBasicUsage md-divider {
+  margin-top: 10px;
+  margin-bottom: 0; }
+
+.addTeam {
+  margin-top: 20px;
+  margin-bottom: 10px
+}

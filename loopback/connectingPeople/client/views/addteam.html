@@ -1,0 +1,19 @@
+<h1 ng-init="initTeam()">Team</h1>
+<hr>
+<form name="teamForm " novalidate>
+    <div class="form-group " ng-class="{ 'has-error': teamForm.content.$invalid && teamForm.content.$dirty} ">
+        <input type="text " class="form-control focus " name="Team Name " placeholder="Team Name " autocomplete="off
+            " required ng-model="newTeam.name ">
+        <input type="text " class="form-control focus " name="Area " placeholder="Area " autocomplete="off
+            " required ng-model="newTeam.area ">
+        <input type="text " class="form-control focus " name="Pincode " placeholder="Pincode " autocomplete="off
+            " required ng-model="newTeam.pincode ">
+        <input type="text " class="form-control focus " name="Police Station " placeholder="Police Station
+            " autocomplete="off " required
+            ng-model="newTeam.policeStation ">
+    </div>
+    
+    <button ng-if="!newTeam.id" class="btn btn-default " ng-disabled="teamForm.$invalid " ng-click="addTeam(newTeam)">Add</button>
+    <button ng-if="newTeam.id" class="btn btn-default " ng-disabled="teamForm.$invalid " ng-click="teamEdit(newTeam)">Update</button>
+</form>
+<hr>
